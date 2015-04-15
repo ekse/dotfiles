@@ -20,6 +20,7 @@ cnoremap <Esc>d <S-right><Delete>
 cnoremap <C-g>  <C-c>
 nmap \q :nohlsearch<CR>
 
+set shell=/bin/sh " needed when using fish shell
 set incsearch
 set ignorecase
 set smartcase
@@ -61,5 +62,11 @@ if !has('gui_running')
     call ColorTermZenburn()
   endif
 endif
+
+if has('gui_running')
+    " hide toolbar
+    set guioptions-=T 
+endif
+
 syntax on
 
