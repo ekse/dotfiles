@@ -7,6 +7,11 @@ call pathogen#infect()
 nmap j gj
 nmap k gk
 
+"Ctrl-s for saving
+noremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
+
 cnoremap <C-a>  <Home>
 cnoremap <C-b>  <Left>
 cnoremap <C-f>  <Right>
@@ -19,6 +24,10 @@ cnoremap <Esc>f <S-Right>
 cnoremap <Esc>d <S-right><Delete>
 cnoremap <C-g>  <C-c>
 nmap \q :nohlsearch<CR>
+
+nmap <C-PageUp> :bprevious<CR> 
+nmap <C-PageDown> :bnext<CR> 
+nmap <C-w> :bdelete<CR>
 
 set shell=/bin/sh " needed when using fish shell
 set incsearch
@@ -48,7 +57,15 @@ if has('cscope')
     command -nargs=0 Cscope cs add cscope.out
 endif 
 
+" Tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
+
+" NERDTree
+nmap <F5> :NERDTreeToggle<CR>
+let g:NERDTreeMouseMode = 2
 
 function! ColorTermZenburn()
   colorscheme zenburn
@@ -65,8 +82,11 @@ endif
 
 if has('gui_running')
     " hide toolbar
-    set guioptions-=T 
-endif
+    colorscheme gruvbox 
+    set background=dark
+    set guioptions-=T
+    set guifont=Monospace\ 10
 
+endif
 syntax on
 
