@@ -44,6 +44,9 @@ set shiftwidth=4
 set number
 set nobackup
 
+au BufRead,BufNewfile *.yara set filetype=yara
+
+
 " ctags / cscope settings
 map <C-y> :exec("tag ".expand("<cword>"))<CR>
 if has('cscope')
