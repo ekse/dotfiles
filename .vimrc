@@ -8,9 +8,11 @@ nmap j gj
 nmap k gk
 
 "Ctrl-s for saving
-noremap <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
+noremap <C-s> :update<CR>
+vnoremap <C-s> <C-c>:update<CR>
+inoremap <C-s> <C-o>:update<CR>
+
+noremap <C-w> :BD<CR>
 
 cnoremap <C-a>  <Home>
 "cnoremap <C-b>  <Left>
@@ -27,7 +29,6 @@ nmap \q :nohlsearch<CR>
 
 nmap <C-PageUp> :bprevious!<CR> 
 nmap <C-PageDown> :bnext!<CR> 
-nmap <C-w> :bdelete<CR>
 
 set shell=/bin/sh " needed when using fish shell
 set incsearch
