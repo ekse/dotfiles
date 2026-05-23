@@ -1,0 +1,15 @@
+atool
+gcc
+g++
+gdb
+git
+htop
+lsof
+ltrace
+curl
+nmap
+ncat
+strace
+sshpass
+ripgrep
+neovim
