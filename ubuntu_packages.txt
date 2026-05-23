@@ -3,6 +3,7 @@ gcc
 g++
 gdb
 git
+git-credential-oauth
 htop
 lsof
 ltrace
