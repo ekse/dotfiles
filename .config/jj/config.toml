@@ -1,0 +1,14 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "Sebastien Duquette"
+email = "sduquette@fastmail.com"
+
+[ui]
+default-command = "log"
+editor = "nvim"
+diff-formatter = "delta"
+
+[merge-tools.delta]
+diff-expected-exit-codes = [0,1]
+
